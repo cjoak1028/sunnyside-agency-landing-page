@@ -1,0 +1,28 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "description": "sunnyside agency landing page code challenge from frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjoak1028/sunnyside-agency-landing-page.git"
+  },
+  "author": "CJ Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjoak1028/sunnyside-agency-landing-page/issues"
+  },
+  "homepage": "https://github.com/cjoak1028/sunnyside-agency-landing-page#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.0.2"
+  }
+}
