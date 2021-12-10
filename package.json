@@ -4,7 +4,7 @@
   "description": "sunnyside agency landing page code challenge from frontend mentor",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass app/sass/main.scss app/css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass"
   },
