@@ -2,7 +2,7 @@
     background-image: url('../../images/desktop/image-header.jpg');
     width: 100%;
     height: 100vh;
-    background-position: center bottom;
+    background-position: top;
     background-size: cover;
 
     &__nav {
@@ -36,5 +36,14 @@
             font-weight: 300;
             color: $color-white;
         }
+    }
+
+    &__heading {
+        text-align: center;
+        margin-top: 9.6rem;
+    }
+
+    &__arrow {
+        margin-top: 10.5rem;
     }
 }
