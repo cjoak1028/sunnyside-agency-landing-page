@@ -4,6 +4,9 @@
 .u-flex-jc-sb {
   justify-content: space-between; }
 
+.u-flex-ai-c {
+  align-items: center; }
+
 html {
   font-size: 62.5%; }
 
@@ -28,7 +31,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Fraunces", sans-serif;
-  font-size: 1.4rem;
   font-weight: 900; }
 
 .btn--bordered {
@@ -47,6 +49,10 @@ body {
   background-size: cover; }
   .header__nav {
     padding: 4.5rem 3.9rem; }
+  .header__logo-box {
+    width: 17.2rem; }
+  .header__logo {
+    width: 100%; }
   .header__menu {
     list-style: none; }
     .header__menu li {
@@ -55,6 +61,5 @@ body {
         margin-right: 5.1rem; }
   .header__link:link, .header__link:visited {
     text-decoration: none;
-    font-size: 1.4rem;
     font-weight: 300;
     color: white; }
