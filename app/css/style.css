@@ -1,11 +1,37 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px+:        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 .u-flex {
-  display: flex; }
+  display: flex !important; }
 
 .u-flex-jc-sb {
-  justify-content: space-between; }
+  justify-content: space-between !important; }
 
 .u-flex-ai-c {
-  align-items: center; }
+  align-items: center !important; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 9rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-big {
+      margin-bottom: 6rem !important; } }
 
 html {
   font-size: 62.5%; }
@@ -34,6 +60,17 @@ body {
   font-size: 5.5rem;
   font-weight: 900;
   letter-spacing: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 3.9rem;
+      letter-spacing: 0.7rem; } }
+
+.heading-secondary {
+  color: #23303e;
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  letter-spacing: -0.2rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -43,7 +80,7 @@ body {
 
 .btn--bordered {
   padding: 1.9rem 3rem;
-  border-radius: 4rem; }
+  border-radius: 3rem; }
 
 .btn--white {
   background-color: white;
@@ -55,28 +92,66 @@ body {
 .header {
   background-image: url("../../images/desktop/image-header.jpg");
   width: 100%;
-  height: 100vh;
-  background-position: top;
+  height: 80rem;
+  background-position: bottom;
   background-size: cover; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 54rem;
+      background-image: url("../../images/mobile/image-header.jpg"); } }
   .header__nav {
     padding: 4.5rem 3.9rem;
     font-size: 1.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__nav {
+        padding: 3.2rem 2.4rem; } }
   .header__logo-box {
+    position: relative;
     width: 17.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__logo-box {
+        width: 12.6rem; } }
   .header__logo {
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .header__menu {
     list-style: none; }
     .header__menu li {
       display: inline-block; }
       .header__menu li:not(:last-child) {
         margin-right: 5.1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__menu {
+        display: none; } }
   .header__link:link, .header__link:visited {
     text-decoration: none;
     font-weight: 300;
     color: white; }
   .header__heading {
-    text-align: center;
-    margin-top: 9.6rem; }
-  .header__arrow {
-    margin-top: 10.5rem; }
+    width: 83%;
+    margin: auto; }
+
+.hamburger {
+  position: relative;
+  display: none;
+  width: 2.5rem;
+  height: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .hamburger {
+      display: inline-block; } }
+  .hamburger__icon {
+    top: calc(50% - 1px); }
+    .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white; }
+    .hamburger__icon::before, .hamburger__icon::after {
+      content: ""; }
+    .hamburger__icon::before {
+      top: -0.89rem; }
+    .hamburger__icon::after {
+      top: 0.89rem; }

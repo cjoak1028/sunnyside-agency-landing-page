@@ -13,4 +13,21 @@ body {
     font-size: 5.5rem;
     font-weight: 900;
     letter-spacing: 1rem;
+
+    @include respond(phone) {
+        font-size: 3.9rem;
+        letter-spacing: 0.7rem;
+    }
+}
+
+.heading-secondary {
+    color: $color-blue-dark-desat;
+    font-family: $font-display;
+    font-size: 3.8rem;
+    font-weight: 900;
+    letter-spacing: -0.2rem;
+}
+
+.paragraph {
+
 }

@@ -1,11 +1,16 @@
-.u-flex {
-    display: flex;
+.u-flex { display: flex !important; }
+
+.u-flex-jc-sb { justify-content: space-between !important; }
+
+.u-flex-ai-c { align-items: center !important; }
+
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom-big { 
+    margin-bottom: 9rem !important; 
+
+    @include respond(phone) {
+        margin-bottom: 6rem !important;
+    }
 }
 
-.u-flex-jc-sb {
-    justify-content: space-between;
-}
-
-.u-flex-ai-c {
-    align-items: center;
-}

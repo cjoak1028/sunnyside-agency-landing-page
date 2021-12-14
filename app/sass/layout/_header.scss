@@ -1,21 +1,37 @@
 .header {
     background-image: url('../../images/desktop/image-header.jpg');
     width: 100%;
-    height: 100vh;
-    background-position: top;
+    height: 80rem;
+    background-position: bottom;
     background-size: cover;
+
+    @include respond(phone) {
+        height: 54rem;
+        background-image: url('../../images/mobile/image-header.jpg');
+    }
 
     &__nav {
         padding: 4.5rem 3.9rem;
         font-size: 1.6rem;
+
+        @include respond(phone) {
+            padding: 3.2rem 2.4rem;
+        }
     }
 
     &__logo-box {
+        position: relative;
         width: 17.2rem;
+
+        @include respond(phone) {
+            width: 12.6rem;
+        }
+
     }
 
     &__logo {
         width: 100%;
+        @include absCenter;
     }
 
     &__menu {
@@ -27,6 +43,10 @@
             &:not(:last-child) {
                 margin-right: 5.1rem;
             }
+        }
+
+        @include respond(tab-port) {
+            display: none;
         }
     }
 
@@ -40,11 +60,39 @@
     }
 
     &__heading {
-        text-align: center;
-        margin-top: 9.6rem;
+        width: 83%;
+        margin: auto;
+    }
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    width: 2.5rem;
+    height: 2rem;
+
+    @include respond(tab-port) {
+        display: inline-block;
     }
 
-    &__arrow {
-        margin-top: 10.5rem;
+    &__icon {
+        top: calc(50% - 1px);
+        
+        &,
+        &::before,
+        &::after {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $color-white;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+        }
+
+        &::before { top: -0.89rem; }
+        &::after { top: 0.89rem; }
     }
 }

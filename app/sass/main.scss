@@ -1,3 +1,4 @@
+@import 'abstracts/mixins';
 @import 'abstracts/utilities';
 @import 'abstracts/variables';
 
@@ -7,3 +8,5 @@
 @import 'components/button';
 
 @import 'layout/header';
+
+@import 'pages/home';
