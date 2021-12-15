@@ -76,7 +76,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Fraunces", sans-serif;
-  font-weight: 900; }
+  font-weight: 900;
+  transition: all .2s; }
 
 .btn--bordered {
   padding: 1.9rem 3rem;
@@ -92,12 +93,13 @@ body {
 .header {
   background-image: url("../../images/desktop/image-header.jpg");
   width: 100%;
-  height: 80rem;
+  height: 100vh;
+  min-height: 60rem;
   background-position: bottom;
   background-size: cover; }
   @media only screen and (max-width: 37.5em) {
     .header {
-      height: 54rem;
+      min-height: 54rem;
       background-image: url("../../images/mobile/image-header.jpg"); } }
   .header__nav {
     padding: 4.5rem 3.9rem;
@@ -155,3 +157,8 @@ body {
       top: -0.89rem; }
     .hamburger__icon::after {
       top: 0.89rem; }
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 60rem); }

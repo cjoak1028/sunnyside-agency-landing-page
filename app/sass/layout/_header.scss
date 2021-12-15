@@ -1,12 +1,13 @@
 .header {
     background-image: url('../../images/desktop/image-header.jpg');
     width: 100%;
-    height: 80rem;
+    height: 100vh;
+    min-height: 60rem;
     background-position: bottom;
     background-size: cover;
 
     @include respond(phone) {
-        height: 54rem;
+        min-height: 54rem;
         background-image: url('../../images/mobile/image-header.jpg');
     }
 
