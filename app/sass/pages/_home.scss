@@ -28,10 +28,25 @@
 
         &--left {
             background-image: url('../../images/desktop/image-graphic-design.jpg');
+            color: $color-cyan-dark-desat;
         }
 
         &--right {
             background-image: url('../../images/desktop/image-photography.jpg');
+            color: $color-blue-dark;
+        }
+        
+        .text-container {
+            min-width: 35rem;
+            max-width: 48%;
+            margin: auto;
+            margin-top: 40rem;
+            text-align: center;
+            
+
+            p {
+                font-size: 1.6rem;
+            }
         }
     }
 }

@@ -45,6 +45,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .u-margin-bottom-med {
   margin-bottom: 4rem !important; }
 
+.u-margin-bottom-sm {
+  margin-bottom: 3rem !important; }
+
 html {
   font-size: 62.5%; }
 
@@ -83,6 +86,14 @@ body {
   font-size: 3.8rem;
   font-weight: 900;
   letter-spacing: 0rem; }
+
+.heading-tertiary {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 2.7rem; }
+
+.paragraph {
+  line-height: 1.6; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -214,6 +225,16 @@ body {
     background-position: top center;
     background-size: cover; }
     .about__comp--left {
-      background-image: url("../../images/desktop/image-graphic-design.jpg"); }
+      background-image: url("../../images/desktop/image-graphic-design.jpg");
+      color: #25564b; }
     .about__comp--right {
-      background-image: url("../../images/desktop/image-photography.jpg"); }
+      background-image: url("../../images/desktop/image-photography.jpg");
+      color: #19536b; }
+    .about__comp .text-container {
+      min-width: 35rem;
+      max-width: 48%;
+      margin: auto;
+      margin-top: 40rem;
+      text-align: center; }
+      .about__comp .text-container p {
+        font-size: 1.6rem; }
