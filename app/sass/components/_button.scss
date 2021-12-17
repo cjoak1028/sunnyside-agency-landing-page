@@ -45,16 +45,22 @@
         height: 9px;
         border-radius: 10px;
         border: none;
-        padding: 0 6px;
+        padding: 0 16px;
         color: transparent;
         position: relative;
 
+        @include respond(phone) {
+            padding: 0 6px;       
+        }
+
         &::after {
-            content: 'learn more';
+            content: 'learn \00a0more';
             position: absolute;
-            color:  $color-blue-dark-desat;
             left: 6px;
-            top: -10px;
+            top: -12px;
+            color: $color-blue-dark-desat;
+            font-size: 1.61rem;
+            font-weight: 900;
         }
     }
 }

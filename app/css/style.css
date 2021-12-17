@@ -50,6 +50,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
@@ -128,15 +131,20 @@ body {
   height: 9px;
   border-radius: 10px;
   border: none;
-  padding: 0 6px;
+  padding: 0 16px;
   color: transparent;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--underlined {
+      padding: 0 6px; } }
   .btn--underlined::after {
-    content: 'learn more';
+    content: 'learn \00a0more';
     position: absolute;
-    color: #23303e;
     left: 6px;
-    top: -10px; }
+    top: -12px;
+    color: #23303e;
+    font-size: 1.61rem;
+    font-weight: 900; }
 
 .header {
   background-image: url("../../images/desktop/image-header.jpg");
@@ -210,6 +218,16 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 60rem); }
+  @media only screen and (max-width: 56.25em) {
+    .about {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60rem 44rem 60rem 44rem repeat(2, 60rem); } }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      grid-template-rows: 45rem 44rem 45rem 44rem repeat(2, 60rem); } }
+  @media only screen and (max-width: 23.5em) {
+    .about {
+      grid-template-rows: 31rem 44rem 31rem 44rem repeat(2, 60rem); } }
   .about__image {
     width: 100%;
     height: 100%;
@@ -219,11 +237,22 @@ body {
     padding: 0 23%; }
     .about__text-container--left {
       padding-right: 16%; }
+      @media only screen and (max-width: 56.25em) {
+        .about__text-container--left {
+          grid-row: 2 / 3; } }
     .about__text-container--right {
       padding-left: 16%; }
+      @media only screen and (max-width: 56.25em) {
+        .about__text-container--right {
+          grid-row: 4 / 5; } }
+    @media only screen and (max-width: 56.25em) {
+      .about__text-container {
+        text-align: center;
+        padding: 0 10%; } }
   .about__comp {
-    background-position: top center;
-    background-size: cover; }
+    background-position: 50% 45%;
+    background-size: cover;
+    position: relative; }
     .about__comp--left {
       background-image: url("../../images/desktop/image-graphic-design.jpg");
       color: #25564b; }
@@ -231,10 +260,12 @@ body {
       background-image: url("../../images/desktop/image-photography.jpg");
       color: #19536b; }
     .about__comp .text-container {
-      min-width: 35rem;
-      max-width: 48%;
-      margin: auto;
-      margin-top: 40rem;
-      text-align: center; }
+      position: absolute;
+      text-align: center;
+      bottom: 0px;
+      margin-bottom: 6rem;
+      width: 35rem;
+      left: 50%;
+      transform: translateX(-50%); }
       .about__comp .text-container p {
         font-size: 1.6rem; }
