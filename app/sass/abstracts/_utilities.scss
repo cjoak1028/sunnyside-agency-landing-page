@@ -1,6 +1,12 @@
 .u-flex { display: flex !important; }
 
+.u-flex-r { flex-direction: row; }
+
+.u-flex-c { flex-direction: column; }
+
 .u-flex-jc-sb { justify-content: space-between !important; }
+
+.u-flex-jc-c { justify-content: center !important; }
 
 .u-flex-ai-c { align-items: center !important; }
 
@@ -12,5 +18,9 @@
     @include respond(phone) {
         margin-bottom: 6rem !important;
     }
+}
+
+.u-margin-bottom-med {
+    margin-bottom: 4rem !important;
 }
 

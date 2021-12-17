@@ -9,4 +9,29 @@
         object-fit: cover;
         object-position: center;
     }
+
+    &__text-container {
+         padding: 0 23%;
+
+         &--left {
+            padding-right: 16%;
+         }
+
+         &--right {
+            padding-left: 16%;
+        }
+    }
+
+    &__comp {
+        background-position: top center;
+        background-size: cover;
+
+        &--left {
+            background-image: url('../../images/desktop/image-graphic-design.jpg');
+        }
+
+        &--right {
+            background-image: url('../../images/desktop/image-photography.jpg');
+        }
+    }
 }

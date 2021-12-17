@@ -18,8 +18,17 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .u-flex {
   display: flex !important; }
 
+.u-flex-r {
+  flex-direction: row; }
+
+.u-flex-c {
+  flex-direction: column; }
+
 .u-flex-jc-sb {
   justify-content: space-between !important; }
+
+.u-flex-jc-c {
+  justify-content: center !important; }
 
 .u-flex-ai-c {
   align-items: center !important; }
@@ -32,6 +41,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-big {
       margin-bottom: 6rem !important; } }
+
+.u-margin-bottom-med {
+  margin-bottom: 4rem !important; }
 
 html {
   font-size: 62.5%; }
@@ -70,14 +82,15 @@ body {
   font-family: "Fraunces", sans-serif;
   font-size: 3.8rem;
   font-weight: 900;
-  letter-spacing: -0.2rem; }
+  letter-spacing: 0rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
-  transition: all .2s; }
+  transition: all .2s;
+  cursor: pointer; }
 
 .btn--bordered {
   padding: 1.9rem 3rem;
@@ -89,6 +102,30 @@ body {
   .btn--white:hover {
     color: white;
     background-color: rgba(255, 255, 255, 0.3); }
+
+.btn--yellow {
+  background-color: rgba(250, 212, 0, 0.3); }
+  .btn--yellow:hover {
+    background-color: #fad400; }
+
+.btn--red {
+  background-color: rgba(254, 120, 103, 0.3); }
+  .btn--red:hover {
+    background-color: #fe7867; }
+
+.btn--underlined {
+  height: 9px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 6px;
+  color: transparent;
+  position: relative; }
+  .btn--underlined::after {
+    content: 'learn more';
+    position: absolute;
+    color: #23303e;
+    left: 6px;
+    top: -10px; }
 
 .header {
   background-image: url("../../images/desktop/image-header.jpg");
@@ -167,3 +204,16 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center; }
+  .about__text-container {
+    padding: 0 23%; }
+    .about__text-container--left {
+      padding-right: 16%; }
+    .about__text-container--right {
+      padding-left: 16%; }
+  .about__comp {
+    background-position: top center;
+    background-size: cover; }
+    .about__comp--left {
+      background-image: url("../../images/desktop/image-graphic-design.jpg"); }
+    .about__comp--right {
+      background-image: url("../../images/desktop/image-photography.jpg"); }
