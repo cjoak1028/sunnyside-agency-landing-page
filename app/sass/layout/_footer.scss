@@ -1,0 +1,48 @@
+.footer {
+    background-color: $color-cyan-dark-mod;
+    position: relative;
+    height: 35rem;
+    color: rgba($color-cyan-dark-desat, 0.6);
+
+    &__logo {
+        width: 17rem;
+        display: inline-block;
+    }
+
+    &__content {
+        position: absolute;
+        width: 29.5rem;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    ul>li {
+        display: inline-block;
+        transition: all .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__logos {
+        width: 16.5rem;
+        margin: auto;
+
+        img {
+            cursor: pointer;
+        }
+
+        img:hover {
+            fill: white !important;
+        }
+    }
+}
