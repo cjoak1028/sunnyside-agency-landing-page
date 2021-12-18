@@ -165,20 +165,26 @@ body {
     text-align: center;
     transform: translate(-50%, -50%); }
   .footer ul {
-    width: 100%; }
-  .footer ul > li {
-    display: inline-block;
-    transition: all .2s;
-    cursor: pointer; }
-    .footer ul > li:hover {
+    width: 100%;
+    list-style: none; }
+  .footer ul > li > a {
+    text-decoration: none;
+    transition: all .2s; }
+    .footer ul > li > a:link, .footer ul > li > a:visited {
+      color: currentColor; }
+    .footer ul > li > a:hover {
       color: white; }
   .footer__logos {
-    width: 16.5rem;
-    margin: auto; }
-    .footer__logos img {
+    width: 17rem;
+    margin: auto;
+    transition: all .2s; }
+    .footer__logos a {
+      display: inline-block;
       cursor: pointer; }
-    .footer__logos img:hover {
-      fill: white !important; }
+      .footer__logos a svg path {
+        transition: fill .2s; }
+      .footer__logos a:hover svg path {
+        fill: white; }
 
 .header {
   background-image: url("../../images/desktop/image-header.jpg");
