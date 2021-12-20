@@ -98,6 +98,10 @@ body {
   font-weight: 900;
   font-size: 2.7rem; }
 
+.heading-quaternary {
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif; }
+
 .paragraph {
   line-height: 1.6; }
 
@@ -309,6 +313,55 @@ body {
       transform: translateX(-50%); }
       .about__comp .text-container p {
         font-size: 1.6rem; }
+
+.testimonials {
+  padding: 16.5rem 16.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .testimonials {
+      padding: 6.8rem 16.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .testimonials {
+      padding: 6.8rem 10rem; } }
+  @media only screen and (max-width: 23.5em) {
+    .testimonials {
+      padding: 6.8rem 4rem; } }
+  .testimonials__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 8.5rem;
+    column-gap: 4.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .testimonials__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content); } }
+    .testimonials__container .title {
+      grid-column: 1 / 4;
+      align-self: center;
+      justify-self: center; }
+      @media only screen and (max-width: 56.25em) {
+        .testimonials__container .title {
+          grid-column: 1; } }
+    .testimonials__container .client {
+      text-align: center; }
+      .testimonials__container .client__photo {
+        width: 7.2rem;
+        border-radius: 100%;
+        margin-bottom: 7rem; }
+        @media only screen and (max-width: 56.25em) {
+          .testimonials__container .client__photo {
+            margin-bottom: 4rem; } }
+      .testimonials__container .client__testimonial {
+        margin-bottom: 8rem;
+        color: #818498; }
+        @media only screen and (max-width: 56.25em) {
+          .testimonials__container .client__testimonial {
+            margin-bottom: 4.5rem; } }
+      .testimonials__container .client__name {
+        margin-bottom: 1.5rem;
+        font-family: "Fraunces", sans-serif;
+        font-weight: 900;
+        color: #23303e; }
 
 .gallery {
   display: grid;
